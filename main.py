@@ -1,15 +1,11 @@
 from GUI import (Window, Point, Line )
+from cell import (Cell)
 def main():
     win = Window(800, 600)
-    p1 = Point(x=0, y=0)
-    p2 = Point(x=255, y=255)
-    line = Line(p1,p2)
-    p3 = Point(256, 255)
-    p4 = Point(512, 0)
-    line2 = Line(p3, p4)
-    win.draw_line(line, "green")
-    win.draw_line(line2, "red")
+    cell = Cell(win)
+    cell.draw(110,110,100,100)
+    cell2 = Cell(win)
+    cell2.draw(50, 50, 90, 90)
     win.wait_for_close()
-
 
 main()
