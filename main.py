@@ -5,6 +5,7 @@ def main():
     win = Window(800, 600)
     maze = Maze(50,50,5,4,120,50,win)
     maze._create_cells()
+    maze._break_entrance_and_exit()
     win.wait_for_close()
     """cell = Cell(win)
     cell.draw(110,110,100,100)
