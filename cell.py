@@ -25,19 +25,19 @@ class Cell:
             if self.has_top_wall:
                 self._win.draw_line(top)
             else:
-                self._win.draw_line(top, "#d9d9d9")
+                self._win.draw_line(top, "white")
             if self.has_right_wall:
                 self._win.draw_line(right)
             else:
-                self._win.draw_line(right, "#d9d9d9")
+                self._win.draw_line(right, "white")
             if self.has_bottom_wall:
                 self._win.draw_line(bot)
             else:
-                self._win.draw_line(bot, "#d9d9d9")
+                self._win.draw_line(bot, "white")
             if self.has_left_wall:
                 self._win.draw_line(left)
             else:
-                self._win.draw_line(left, "#d9d9d9")
+                self._win.draw_line(left, "white")
 
     def draw_move(self, to_cell, undo=False):
         color = "red"
