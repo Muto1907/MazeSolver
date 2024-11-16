@@ -1,6 +1,6 @@
 from GUI import *
 class Cell:
-    def __init__(self, win):
+    def __init__(self, win=None):
         self.has_top_wall = True
         self.has_right_wall = True
         self.has_bottom_wall = True
