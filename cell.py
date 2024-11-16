@@ -17,18 +17,19 @@ class Cell:
         corner_top_right = Point(x2,y1)
         corner_bottom_left = Point(x1, y2)
         corner_bottom_right = Point(x2,y2)
-        if self.has_top_wall:
-            top = Line(corner_top_left, corner_top_right)
-            self._win.draw_line(top)
-        if self.has_right_wall:
-            right = Line(corner_top_right, corner_bottom_right)
-            self._win.draw_line(right)
-        if self.has_bottom_wall:
-            bot = Line(corner_bottom_left, corner_bottom_right)
-            self._win.draw_line(bot)
-        if self.has_left_wall:
-            left = Line(corner_top_left, corner_bottom_left)
-            self._win.draw_line(left)
+        if self._win != None:
+            if self.has_top_wall:
+                top = Line(corner_top_left, corner_top_right)
+                self._win.draw_line(top)
+            if self.has_right_wall:
+                right = Line(corner_top_right, corner_bottom_right)
+                self._win.draw_line(right)
+            if self.has_bottom_wall:
+                bot = Line(corner_bottom_left, corner_bottom_right)
+                self._win.draw_line(bot)
+            if self.has_left_wall:
+                left = Line(corner_top_left, corner_bottom_left)
+                self._win.draw_line(left)
 
     def draw_move(self, to_cell, undo=False):
         color = "red"
