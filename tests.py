@@ -43,6 +43,14 @@ class Tests(unittest.TestCase):
         m1 = Maze(0, 0, num_rows, num_cols, 10, 10)
         m1._break_entrance_and_exit()
         m1._break_walls_r(0,0)
+    
+    def test_maze_wall_reset(self):
+        num_cols = 8
+        num_rows = 5
+        m1 = Maze(0, 0, num_rows, num_cols, 10, 10)
+        for col in m1._cells:
+            for cell in col:
+                self.assertEqual(cell.visited, False)
 
 
 if __name__ == "__main__":
